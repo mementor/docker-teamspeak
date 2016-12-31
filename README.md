@@ -10,9 +10,9 @@ For more information on TeamSpeak and check out it's [website][1].
 Running this will build you a docker image with the latest version of both
 docker-teamspeak and TeamSpeak itself.
 
-    git clone https://github.com/overshard/docker-teamspeak
+    git clone https://github.com/mementor/docker-teamspeak
     cd docker-teamspeak
-    docker build -t overshard/teamspeak .
+    docker build -t mementor/teamspeak .
 
 
 ## Running docker-teamspeak
@@ -24,7 +24,7 @@ system you can map the ports to 9987, 10011, 30033 and no proxy is needed. i.e.
 directory on your host machine is already created before running
 `mkdir -p /mnt/teamspeak`.
 
-    sudo docker run -d=true -p=9987:9987/udp -p=10011:10011 -p=30033:30033 -v=/mnt/teamspeak:/data overshard/teamspeak /start
+    sudo docker run -d=true -p=9987:9987/udp -p=10011:10011 -p=30033:30033 -v=/mnt/teamspeak:/data mementor/teamspeak /start
 
 From now on when you start/stop docker-teamspeak you should use the container id
 with the following commands. To get your container id, after you initial run
